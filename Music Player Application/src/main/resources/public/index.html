@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-art" id="background-art"></div>
+    
+    <div class="player-container">
+        <div class="player-header">
+            <h1>Music Player</h1>
+            <div class="tagline">personal audio experience</div>
+        </div>
+        
+        <div class="music-info">
+            <div class="like-btn" id="like-btn">
+                <i class="fas fa-heart"></i>
+            </div>
+            
+            <div id="album-art-container">
+                <img id="album-art" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Album Art">
+                <div class="album-overlay"></div>
+            </div>
+            
+            <div class="song-info">
+                <div class="song-name" id="song-name">No Song Selected</div>
+                <div class="artist-name" id="artist-name">-</div>
+            </div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-time">
+                <span id="current-time">0:00</span>
+                <span id="total-time">0:00</span>
+            </div>
+            <input type="range" id="progress-bar" value="0" min="0" max="100">
+        </div>
+        
+        <audio id="audio-player">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <div class="controls">
+            <button id="shuffle" class="control-btn">
+                <i class="fas fa-random"></i>
+            </button>
+            <button id="prev" class="control-btn">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button id="play-pause" class="control-btn">
+                <i class="fas fa-play" id="play-icon"></i>
+            </button>
+            <button id="next" class="control-btn">
+                <i class="fas fa-step-forward"></i>
+            </button>
+            <button id="repeat" class="control-btn">
+                <i class="fas fa-redo"></i>
+            </button>
+        </div>
+        
+        <div class="volume-container">
+            <i class="fas fa-volume-up"></i>
+            <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.7">
+        </div>
+        
+        <div class="playlist-buttons">
+            <button id="see-all" class="playlist-btn active">All Songs</button>
+            <button id="favorites" class="playlist-btn">Favorites</button>
+        </div>
+        
+        <div class="playlist">
+            <div class="playlist-header">
+                <span>Playlist</span>
+                <span id="song-count">3 songs</span>
+            </div>
+            <ul id="playlist">
+                <li>
+                    <div class="song-details">
+                        <div class="song-title">Squid Game</div>
+                        <div class="song-artist">Jang Kui</div>
+                    </div>
+                    <div class="song-duration">3:45</div>
+                    <i class="fas fa-heart favorite-icon"></i>
+                </li>
+                <li class="active">
+                    <div class="song-details">
+                        <div class="song-title">Kalki Song</div>
+                        <div class="song-artist">Govin</div>
+                    </div>
+                    <div class="song-duration">4:20</div>
+                    <i class="fas fa-heart favorite-icon active"></i>
+                </li>
+                <li>
+                    <div class="song-details">
+                        <div class="song-title">Shivbha Raj</div>
+                        <div class="song-artist">Ajay-Atul</div>
+                    </div>
+                    <div class="song-duration">5:10</div>
+                    <i class="fas fa-heart favorite-icon"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

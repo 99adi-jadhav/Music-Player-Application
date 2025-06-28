@@ -56,5 +56,5 @@ CREATE TABLE songs (
 ### Steps
 1. Clone the repository:
 ```bash
-git clone https://github.com/99adi-jadhav/music-player-application.git
+[git clone https://github.com/99adi-jadhav/music-player-application.git](https://github.com/99adi-jadhav/Music-Player-Application.git)
 
